@@ -7,21 +7,17 @@ export class Navbar extends Component {
         <div className="container">
           <div className='row'>
 
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png" className='col-3' />
-
+            <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png" alt='' className='col-3' />
             <div className='col-6'>
-             <div className='row'> 
-              <h1 className='text-center '>Aras&Arda Pokedex</h1>
+              <div className='row'>
+                <h1 className='text-center '>Aras & Arda Pokedex</h1>
               </div>
               <div className='row'>
-            
-            
-              <img src='https://archives.bulbagarden.net/media/upload/thumb/2/20/Legendary_birds.png/375px-Legendary_birds.png'
-                className='col-12' />
-                </div>
+                <img src='https://archives.bulbagarden.net/media/upload/thumb/2/20/Legendary_birds.png/375px-Legendary_birds.png'
+                alt='' className='col-12' />
+              </div>
             </div>
-
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/249.png" className='col-3' />
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/249.png" alt=' 'className='col-3' />
           </div>
         </div>
       </nav>

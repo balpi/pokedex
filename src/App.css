@@ -1,4 +1,63 @@
-.PokeSearch{
-  width: 100px;
-  background-color: red;
-}
+@import url('./color.css');
+
+.dark{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:slategray;
+    z-index: 9;
+    opacity: 0.8;
+  }
+  .light{
+    background-color: white;
+  }
+  .modal{
+    opacity: 1;
+    display:block;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+
+  }
+  .modal_close{
+    float: right;
+
+  }
+  .modal__content-featuresWeight{
+    float: right;
+  }
+  .modal__content-description{
+        background-color:white;
+      display: grid;
+      grid-template-areas: 'my';
+      gap:1rem;
+      text-align: center;
+      
+  }
+  .modal__content-descriptionImage{
+    
+    margin: auto;
+    grid-area: my;
+  }
+  .modal__content-other{
+    margin: auto;
+    text-align: center;
+    background-color: brown;
+    color: white;
+  }
+  .modal__content-otherBreadcrumbAbilities{
+    display: grid;
+    grid-template-areas: 'my';
+    color: white;
+  }
+  .modal__content-otherStatContentPower{
+    color: white;
+    font-weight: bold;
+    grid-area: my;
+  }
+  

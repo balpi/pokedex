@@ -6,16 +6,16 @@ export class PokeList extends Component {
 
   render() {
     return (
-      <div className='container'>
-        {console.log(this.props.pokem)}
-        <ul>
+      <div  >
+        
+        <div className='card-group'>
         {this.props.pokem.map(x =>
-          <li>
-            <ListPokeCards key={x.id} sending={x} />
-          </li>
+          <div className='col-4'>
+            <ListPokeCards key={x.id} pokemons={x} />
+          </div>
           
     )}
-    </ul>
+    </div>
       </div>
     )
   }
