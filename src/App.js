@@ -4,6 +4,7 @@ import Navbar from './Compenent/Navbar'
 import PokeList from './Compenent/PokeList'
 import Footer from './Compenent/Footer'
 import './App.css'
+import {v4} from 'uuid'
 
 
 
@@ -30,6 +31,7 @@ export class App extends Component {
     const promises = await data.results.map(async pokemon => {
       const result = await fetch(pokemon.url);
       const res = await result.json();
+      
 
       return res;
     });
@@ -65,7 +67,7 @@ export class App extends Component {
 
         {
           <div className='container' >
-            <PokeList key={this.state.offset} pokem={this.state.pokemons} />
+            <PokeList key={v4()} pokem={this.state.pokemons} />
           </div>
         }
 

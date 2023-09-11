@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PokeballImage from '../assets/pokeball.png'
 import PokemonDetails from './PokemonDetails';
+import {v4} from 'uuid'
 
 export class ListPokeCards extends Component {
 constructor(props){
 super(props);
-
 
   this.state={
     ShowPokemonDetails:false
@@ -26,10 +26,11 @@ super(props);
   render() {
     const pokemon = this.props.pokemons;
     return (
-
+      <div className='col-4'>
       <div className='col-8' style={{backgroundColor:`white`}}  >
         <div className='card'onClick={this.Details} >
-        <div className="card text-red  mb-3" style={{backgroundColor: `var(--bg-poke-color-light-${pokemon.types[0].type.name})`}} >
+        <div className="card text-red  mb-3" 
+        style={{backgroundColor: `var(--bg-poke-color-light-${pokemon.types[0].type.name})`}} >
           <div className="card-header text-center">{pokemon.name.toUpperCase()}</div>
           <img src= {pokemon.sprites.front_default} alt='Loading' className='card img-center'/>
           <div className="card-body" >
@@ -43,9 +44,10 @@ super(props);
         {
           
           this.state.ShowPokemonDetails && <PokemonDetails Details={this.Details}
-           pokemon={this.props.pokemons} key={this.props.pokemons.name} /> 
+           pokemon={this.props.pokemons} key={v4()} /> 
         }
 
+        </div>
         </div>
         )
   }
