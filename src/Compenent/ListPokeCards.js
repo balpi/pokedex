@@ -26,7 +26,7 @@ super(props);
   render() {
     const pokemon = this.props.pokemons;
     return (
-      <div className='col-4'>
+      <div className='col-xs-12 col-md-4'>
       <div className='col-8' style={{backgroundColor:`white`}}  >
         <div className='card'onClick={this.Details} >
         <div className="card text-red  mb-3" 
